@@ -1,0 +1,5 @@
+開啟新的 Git 
+
+1. 使用 git bash cd "filepath"
+2. git init
+3. git add .
