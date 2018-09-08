@@ -1,5 +1,8 @@
-開啟新的 Git 
+﻿開啟新的 Git, 從頭開始建立git環境
 
 1. 使用 git bash cd "filepath"
 2. git init
-3. git add .
+3. git add .    >>加入所有檔案
+4. git commit -m "xxxxx"    >>　commit 並加上註解　
+5. git log  >>　查看版本
+6. git status >> 查看變更
