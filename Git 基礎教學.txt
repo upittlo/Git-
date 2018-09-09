@@ -6,3 +6,25 @@
 4. git commit -m "xxxxx"    >>　commit 並加上註解　
 5. git log  >>　查看版本
 6. git status >> 查看變更
+
+- Git Status
+查詢版控中狀態
+
+working tree >> 工作目錄
+commit >> 版本
+staged >> 暫存區，add後加入stage
+
+若不在stage內，commit後不會有該項修改(不在版控內)
+
+## 若要反悔變更:
+git reset HEAD >>　返回變更前狀態
+
+
+git checkout -- filename >> discard change
+
+
+## 解決中文亂碼問題
+
+解法1: git config --global core.quotepath false
+
+
