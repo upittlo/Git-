@@ -25,6 +25,19 @@ git checkout -- filename >> discard change
 
 ## 解決中文亂碼問題
 
-解法1: git config --global core.quotepath false
+解法: git config --global core.quotepath false
+
+
+## 使用Vi
+
+vi 檔名 >>修改檔案
+:q  >> 退出
+i >> insert mode 可開始編輯
+esc: >>　回到命令模式
+:w >> 寫入
+:wq >> 寫入並退出
+
+
+
 
 
