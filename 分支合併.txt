@@ -1,0 +1,29 @@
+﻿### 預設master就是分支
+
+1. 建立新分支
+git branch develop
+(develop為分支名稱)
+
+2. 查看所有分支
+git branch
+
+3. 切換分支
+
+git checkout "branch name"
+
+4. 建立分支且直接切換
+
+git checkout -b 'branch name'
+
+
+5. 刪除分支 (不可刪除所在分支)
+
+git branch -d 'name'
+
+(若分支有新的commit且還沒被合併, -d 無法刪除)
+
+git branch -D 'name'
+
+無是是否有新commit,強制刪除
+
+
