@@ -26,4 +26,8 @@ git branch -D 'name'
 
 無是是否有新commit,強制刪除
 
+6. 誤刪分支復原
 
+刪除時會有id 
+
+git branch 'name' 'id' 即可
