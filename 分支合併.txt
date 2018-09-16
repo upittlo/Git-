@@ -31,3 +31,16 @@ git branch -D 'name'
 刪除時會有id 
 
 git branch 'name' 'id' 即可
+
+7. 分支合併
+
+先接換到"主要"分支上 (切換前要先commit)
+
+git checkout "main branch"
+
+git merge "預合併分支"
+
+預合併分支會不有任何改變，主分支將被修改
+
+
+
