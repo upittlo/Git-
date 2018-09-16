@@ -42,5 +42,30 @@ git merge "預合併分支"
 
 預合併分支會不有任何改變，主分支將被修改
 
+8. 回到合併前狀態
+
+git reset --hard ORIG_HEAD
+
+9. 分支合併後建議處理方式
+
+建議只使用單方向合併 (往MASTER合併)
+
+可以砍掉合併後的branch
+並且在最新版重新開啟分支
+用 git branch -d 'branch name' 刪除已合併分支
+
+
+10. 查詢版本線圖
+
+git log --oneline --graph
+
+or 
+
+git log --graph
+
+
+
+
+
 
 
