@@ -80,6 +80,23 @@ git add "檔名"
 git commit  即可完成合併
 
 
+12. fast-forward
+
+快轉機制
+
+若要合併的分支為現有分支的未來版本 (分支有改過，master沒改過)
+快轉機制會直接把branch變成主支 (直接跳一版)
+造成版本線圖不易辨識
+
+(用於本地分支與遠端合併)
+
+13. 避免fast forward的合併方法
+
+git merge "branch name" --no-ff
+則會用一般方式合併
+
+(用於意義上兩條不同分支)
+
 
 
 
