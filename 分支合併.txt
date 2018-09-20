@@ -40,6 +40,9 @@ git checkout "main branch"
 
 git merge "預合併分支"
 
+
+
+
 預合併分支會不有任何改變，主分支將被修改
 
 8. 回到合併前狀態
@@ -96,6 +99,18 @@ git merge "branch name" --no-ff
 則會用一般方式合併
 
 (用於意義上兩條不同分支)
+
+
+13 合併但不commit (用於先debug情況)
+
+git merge --no-ff --no-commit "branch name"
+
+進入合併中狀態
+
+debug玩應進行commit
+或是修改檔案    刪除檔案
+
+14. 
 
 
 
