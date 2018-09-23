@@ -25,8 +25,51 @@ git remote -v
 會有fetch和 push兩版本
 
 建立遠端與local 端連結(第一次push)
-
+(使用前先checkout到要建立連結分支)
 git push --set-upstream origin master
+                               (分支命名，建議用master)
 
 將local端master上傳至遠端origin
+
+3. 列出所有遠端追蹤分支
+
+git branch -r
+
+
+4. 列出所有分支
+
+git branch -a
+
+5. 上傳不同分支
+
+git push -u origin "預上傳分支"
+
+
+6. 分支說明
+
+本地分支: local 端分支
+遠端分支: github上分支
+遠端追蹤分支: git branch -r 結果，用來做對應追蹤
+檢測對應關係  cat .git/config
+
+檢查本地分支檔案: ls -l .git/refs/heads
+遠端追蹤分支檔案: ls -l .git/refs/remotes/origin
+
+7. 發布本地分支到遠端
+
+git push -u origin name
+
+8. 下載所有遠端追蹤分支到local
+
+git fetch
+
+
+9. 切換到本來不存在於local端的遠端分支
+
+git checkout name
+
+會自動複製該分支到local環境(須先完成step 8)
+
+
+
 
