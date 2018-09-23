@@ -1,0 +1,32 @@
+﻿1. 抓下遠端儲存庫
+
+(A) git clone "github上url"
+
+## 抓下來後重新命名
+(B) git clone "url" new name
+
+## 抓下後不checkout到master
+(C) git clone --no-checkout "url" new name
+
+(若要看到資料需checkout master)
+
+2. 開啟Repository
+
+開啟github, create new repository
+
+使用Https複製
+
+若已經在本地端有版控，要上傳至github
+
+git remote add origin "url"
+
+查看版本
+git remote -v
+會有fetch和 push兩版本
+
+建立遠端與local 端連結(第一次push)
+
+git push --set-upstream origin master
+
+將local端master上傳至遠端origin
+

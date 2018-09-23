@@ -110,7 +110,19 @@ git merge --no-ff --no-commit "branch name"
 debug玩應進行commit
 或是修改檔案    刪除檔案
 
-14. 
+14. git branch --merged
+
+##　秀出已合併分支
+
+15. git branch --no-merged
+
+## 嗅出未合併分支
+
+16. 一次刪除所有未合併分支
+
+git beancg --merged | egrep -v "(^\*master|dev)" | xargs git branch -d
+
+
 
 
 
