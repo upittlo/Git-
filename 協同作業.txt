@@ -70,6 +70,41 @@ git checkout name
 
 會自動複製該分支到local環境(須先完成step 8)
 
+10. 刪除遠端分支與遠端追蹤分支
+
+(用於開發完且合併完成)
 
 
+(A). 先push最新版
+(B). 協同開發者先切換到branch，並且git pull
+(C). 先砍本地，git branch -d new1
+(D). git push origin --delete new1 刪除遠端分支
+
+## 對於其他協同作業者而言，遠端分支還是存在
+須使用 git fetch --prune 刪除遠端
+再用 git branch -d 'name' 移除協同作業者本地分支
+
+11. 遠端儲存庫搬家
+
+列出目前遠端位置: git remote -v
+
+git remote set-url origin "新的位置"
+
+建立新的repository
+
+git push --all (將所有分支上傳，自動找到origin新網址，清單在git branch -a)
+
+
+
+12. 若兩邊同時修改到檔案造成無法push
+
+(A)git log --oneline --graph -10 --all 先檢查線圖
+
+(B)git fetch  (取回遠端變更)
+
+(C)git merge origin/master (輸入log 完成commit)
+
+(B)+(C) 可用 git pull
+
+(D)git push
 

@@ -1,0 +1,41 @@
+﻿
+1. 將原始碼加入版控的標準流程
+
+(A) 工作目錄內新增/修改/刪除程式碼
+(B) 將工作目錄中異動檔案加入索引 (git add .)
+(C) 將已加入索引的變更項目建立版本 (git commit)
+
+2. 工作目錄 (working Tree)
+
+是一個變動頻繁的資料夾，所有程式碼都在裡面
+
+每一個改過的檔案，都須明確告訴Git你想要加入版控
+
+告訴Git想要加入版控的唯一方法是更新索引 (add)
+
+索引位於 .git/index
+
+### 還原索引 >> git reset HEAD
+
+3. Stage, Unstage, Untracked
+
+位於索引中檔案 >> Tracked files
+
+不在索引內檔案 >> Untracked Files
+
+索引中檔案根工作目錄中檔案一樣 >>　Stage
+索引中檔案與工作目錄不一致　　>> Unstage
+
+4. 取消最近一次的git add
+
+用於全部重置
+## git rest HEAD  (重置索引)
+
+用於部分重置 可分段commit
+## git reset -p (從索引變更清單中，找出要重製的"部分")
+使用後若為部份修改，會出現兩個不同版本，一個有stage一個沒有
+用於分段commit
+
+5. 索引與目前最新版本地端差異
+
+git diff --cached
