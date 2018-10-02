@@ -39,3 +39,95 @@
 5. 索引與目前最新版本地端差異
 
 git diff --cached
+
+
+6. 重置工作目錄(用於還原unstaged檔案)
+
+git reset --hard
+
+7 回到前n版(n為數字)
+
+git reset --mixed HEAD~n
+
+工作目錄還是原來狀態
+用於刪除commit版本但保留變更，用於整理統整版本
+
+8. 找出工作目錄下每一次的版控紀錄
+
+git reflog
+
+回到任何前一個版本 git reset --hard HEAD@{number}
+                or git reset --hard 版本號
+
+9. 回到上一次merge,reset異動之前版本(只可用於merge, reset後，一般commit無效)
+ 
+git reset --hard ORIG_HEAD
+
+
+10. 復原特定檔案(modified file)
+
+將修改到一半檔案回復原狀
+
+git checkout -- file name
+將file name 內容複製到工作目錄
+可用在檔案或資料夾
+
+git checkout -- folder name
+
+
+11. 返回特定版本內容(檔案復原)
+
+用於從過去版本抓回檔案
+
+git checkout commit_id file_or_folder_name
+
+
+12. 列出被異動的檔案名稱
+
+git diff --name-only
+
+## 列出被改變的狀態
+A = add
+M = Modified
+R = rename
+
+git diff --help 查指令
+
+git diff --name-status
+git diff --cached --name-status
+
+比較commit差異
+git diff --name-status commit1 commit2
+
+
+## 只查特定類型變更檔案(ex: 刪除了哪些檔案)
+git diff --name-status --diff-filter=D commit1 commit2
+
+
+13. 正是基部屬與未來修改 >> 使用patch檔
+
+首先在測試機產生變更後  取出patch
+
+測試環境
+
+git diff HEAD~1 HEAD > ../html5-1.patch
+
+copy patch檔到正式環境
+
+更新正式機內容
+
+cd ..
+
+cd 'file name'
+
+git apply --check ../patch檔路徑   (檢查套用過程是否有衝突or失敗)
+
+git apply ../patch 路徑
+
+
+若發現進版失敗要退版
+
+git apply --reverse ../patch路徑
+(將原來改過去的內容還原)
+
+ 
