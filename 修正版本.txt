@@ -1,0 +1,17 @@
+﻿1. 修改曾經commit過版本
+
+(A).
+用reset
+
+git reset HEAD~1
+
+reset 後再去修改unstaged檔案即可
+
+(B).
+
+直接修改漏改的檔案
+
+git add . 加入索引
+
+git commit --amend  (重新commit最近一次版本)
+

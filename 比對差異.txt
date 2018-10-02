@@ -1,0 +1,23 @@
+﻿1. 工作目錄與索引不同
+
+git diff
+
+2. 索引與最新版本HEAD不同
+
+git diff --cached HEAD
+
+3. 工作目錄與最新版本HEAD差異
+
+git diff HEAD
+
+4. 歷史版本比較
+
+git diff commit1 commit2
+
+5. 索引與歷史commit比較
+
+git diff --cached commit_name
+
+6. 工作目錄與歷史版本比較
+
+git diff commit_name
