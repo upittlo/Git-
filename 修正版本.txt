@@ -15,3 +15,19 @@ git add . 加入索引
 
 git commit --amend  (重新commit最近一次版本)
 
+
+2. rebase 重建基底
+
+git rebase -i 'commit_id'
+
+commit_id選預修改版本之前一版做為基底
+
+在編輯器內修改
+pick >> 修改
+edit >> stop commit,等待被修改沒做完的事情
+若要刪除任一版本，直接刪掉就好
+
+若用edit
+之後不可用commit
+要用 git commit --amend
+
