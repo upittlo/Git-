@@ -19,6 +19,8 @@ git commit --amend  (重新commit最近一次版本)
 2. rebase 重建基底
 
 git rebase -i 'commit_id'
+or
+git rebase -i HEAD~10
 
 commit_id選預修改版本之前一版做為基底
 
@@ -30,4 +32,21 @@ edit >> stop commit,等待被修改沒做完的事情
 若用edit
 之後不可用commit
 要用 git commit --amend
+
+
+3. rebase 衝突解決方法
+
+### rebase 編輯時可以改變commit順序讓process更可讀
+若發生衝突
+
+先用git status看細節
+
+並手動修改卡住部分
+
+git add .
+git rebase --continue
+
+或放棄
+git rebase --abort
+
 
