@@ -49,4 +49,36 @@ git rebase --continue
 或放棄
 git rebase --abort
 
+4. 插入版本(全新commit)
+
+git rebase -i commit_id
+在要插入位置的版本將pick 改成edit
+存檔 退出
+修改檔案
+git add .
+
+git commit -m " "
+
+git rebase --continue
+
+
+5. 透過rebase合併歷史版本
+
+git rebase -i commit_id
+
+在需要合併的版本區 換上 squash (往前一個版本壓縮上去)
+版本歷史紀錄會合併
+
+
+6.修改歷史中某一版本並且加入變更
+
+修改檔案
+git add .
+git commit --fixup=commit_id 
+
+git rebase -i --autosquash 預修改版本之前的commit_id
+
+(其餘rebase會自動幫忙完成)
+
+
 

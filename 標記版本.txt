@@ -1,0 +1,50 @@
+﻿##標籤
+
+用於指向版本，不會變動
+
+輕量標籤 tag 只是個指標，log內容為版本commit log
+annotated tag用於發行新版本，因為可以寫自己的log
+
+
+
+1. 建立輕量標籤
+
+git tag 標籤名 commit_id
+
+若要刪除
+
+git tag -d test-v1.0
+
+也可以直接到檔案裡面刪除
+
+2. 標示標籤 (annotated)
+
+(要給log 訊息)
+git tag -a 標籤名  版本id
+
+
+3. 查看標籤訊息
+
+git tag -n
+git tag -n10 (出列10個tag訊息)
+
+4.建立標籤推送到遠端
+
+git push --tags
+
+
+5. 刪除遠端tag
+
+git push --delete origin tag_id
+
+6. 比對遠端與本地標籤差異，若有不同則刪除本地標籤
+
+git fetch --prune --prune-tags
+
+7. 
+
+
+
+
+
+
