@@ -38,6 +38,15 @@ esc: >>　回到命令模式
 :wq >> 寫入並退出
 
 
+### 第一次開Repository
 
+1. create repository in github
+2. 進入file右鍵開git bash
+3. echo "read me" >> README.md   ---> 開啟readme檔
+4. git init
+5. git add README.md
+6. git commit -m "first commit"
+7. git remote add origin "URL"
+8. git push -u origin master
 
 
