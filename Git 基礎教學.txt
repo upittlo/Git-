@@ -43,10 +43,21 @@ esc: >>　回到命令模式
 1. create repository in github
 2. 進入file右鍵開git bash
 3. echo "read me" >> README.md   ---> 開啟readme檔
-4. git init
-5. git add README.md
-6. git commit -m "first commit"
-7. git remote add origin "URL"
-8. git push -u origin master
+4. touch .gitignore >> 在檔案內加入要ignore的部分
+
+https://gitbook.tw/chapters/using-git/ignore.html
+
+5. git init
+6. git add README.md
+7. git commit -m "first commit"
+8. git remote add origin "URL"
+9. git push -u origin master
+
+若push跳出錯誤:
+
+ git branch --set-upstream-to=origin/master
+ git pull --rebase
+ git push 
+
 
 
