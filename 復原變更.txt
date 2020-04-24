@@ -51,6 +51,7 @@ git reset --mixed HEAD~n
 
 工作目錄還是原來狀態
 用於刪除commit版本但保留變更，用於整理統整版本
+若要連工作目錄一起還原  git reset --hard HEAD
 
 8. 找出工作目錄下每一次的版控紀錄
 
