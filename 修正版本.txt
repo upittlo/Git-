@@ -5,7 +5,13 @@
 
 git reset HEAD~1
 
+將commit的結果退回unstaged (檔案本身還是修改狀態)
 reset 後再去修改unstaged檔案即可
+
+git reset --hard
+將commit的結果退回unstaged (檔案變回未修改狀態)
+
+
 
 (B).
 
@@ -27,12 +33,14 @@ commit_id選預修改版本之前一版做為基底
 在編輯器內修改
 pick >> 修改
 edit >> stop commit,等待被修改沒做完的事情
-若要刪除任一版本，直接刪掉就好
+若要刪除任一版本，直接刪掉就好(pick開頭)
 
 若用edit
 之後不可用commit
 要用 git commit --amend
 
+
+還原rebase 動作: git reset --hard ORIG_HEAD
 
 3. rebase 衝突解決方法
 
